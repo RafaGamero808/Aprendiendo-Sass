@@ -1,0 +1,37 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: blue;
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+.central {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.imagen {
+  width: 50%;
+  margin-right: 20px;
+}
+
+.texto {
+  width: 40%;
+}
+
+footer {
+  background-color: #000099;
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+/*# sourceMappingURL=styles.css.map */
