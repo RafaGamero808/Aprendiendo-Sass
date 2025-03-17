@@ -1,0 +1,97 @@
+h1 {
+  font-size: 28px;
+  color: #4CAF50;
+  margin-bottom: 12px;
+}
+
+h2 {
+  font-size: 24px;
+  color: #45a049;
+  margin-bottom: 12px;
+}
+
+h3 {
+  font-size: 20px;
+  color: #3d8b40;
+  margin-bottom: 12px;
+}
+
+h4 {
+  font-size: 18px;
+  color: #357935;
+  margin-bottom: 12px;
+}
+
+h5 {
+  font-size: 16px;
+  color: #2d662d;
+  margin-bottom: 12px;
+}
+
+h6 {
+  font-size: 14px;
+  color: #255225;
+  margin-bottom: 12px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+table th, table td {
+  padding: 12px 15px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+table th {
+  background-color: #4CAF50;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+table tr:hover {
+  background-color: #ddd;
+}
+
+tr:nth-child(1) {
+  background-color: #f8d7da;
+}
+
+tr:nth-child(2) {
+  background-color: #fff3cd;
+}
+
+tr:nth-child(3) {
+  background-color: #d4edda;
+}
+
+tr:nth-child(4) {
+  background-color: #d1ecf1;
+}
+
+tr:nth-child(5) {
+  background-color: #f8f9fa;
+}
+
+tr:nth-child(6) {
+  background-color: #e2e3e5;
+}
+
+@media (min-width: 480px) {
+  table {
+    width: min(50%, 300px);
+  }
+}
+@media (min-width: 768px) {
+  table {
+    width: min(70%, 500px);
+  }
+}
+@media (min-width: 1024px) {
+  table {
+    width: min(90%, 700px);
+  }
+}
+
+/*# sourceMappingURL=modulos.css.map */

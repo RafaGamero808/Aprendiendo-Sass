@@ -1,0 +1,77 @@
+// Importar el módulo de listas
+@use "sass:list";
+
+// Función para calcular la anchura en porcentaje con un límite máximo
+@function calcularAnchura($factor, $max) {
+    @return min(#{$factor * 100%}, #{$max}px);
+}
+
+// Tamaños de fuente para h1-h6
+$tamanos: (h1: 28px, h2: 24px, h3: 20px, h4: 18px, h5: 16px, h6: 14px);
+$colores: (#4CAF50, #45a049, #3d8b40, #357935, #2d662d, #255225);
+
+// Estilos usando @each
+@each $h, $size in $tamanos {
+    #{$h} {
+        font-size: $size;
+        color: list.nth($colores, list.index($tamanos, ($h $size)));
+        margin-bottom: 12px;
+    }
+}
+
+// Mixin para los estilos de la tabla
+@mixin estilo-tabla($bg-color) {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    
+    th, td {
+        padding: 12px 15px;
+        text-align: left;
+        border: 1px solid #ddd;
+    }
+
+    th {
+        background-color: $bg-color;
+        color: white;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    tr:hover {
+        background-color: #ddd;
+    }
+}
+
+// Aplicamos el mixin a la tabla
+table {
+    @include estilo-tabla(#4CAF50);
+}
+
+// Asignamos colores alternos a las filas
+$colores-filas: #f8d7da, #fff3cd, #d4edda, #d1ecf1, #f8f9fa, #e2e3e5;
+@each $color in $colores-filas {
+    $i: list.index($colores-filas, $color);
+    tr:nth-child(#{$i}) {
+        background-color: $color;
+    }
+}
+
+// calcularAnchura() con media queries
+@media (min-width: 480px) {
+    table {
+        width: calcularAnchura(0.5, 300);
+    }
+}
+
+@media (min-width: 768px) {
+    table {
+        width: calcularAnchura(0.7, 500);
+    }
+}
+
+@media (min-width: 1024px) {
+    table {
+        width: calcularAnchura(0.9, 700);
+    }
+}
