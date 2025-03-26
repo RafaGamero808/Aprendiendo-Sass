@@ -1,0 +1,17 @@
+// Definición de variables globales
+
+// Tamaños de fuente desde el h1 hasta el h6
+$tamanos: (
+    h1: 28px,
+    h2: 24px,
+    h3: 20px,
+    h4: 18px,
+    h5: 16px,
+    h6: 14px
+);
+
+// Colores para los encabezados
+$colores: (#4CAF50, #45a049, #3d8b40, #357935, #2d662d, #255225);
+
+// Colores  para las filas de tabla
+$colores-filas: #f8d7da, #fff3cd, #d4edda, #d1ecf1, #f8f9fa, #e2e3e5;

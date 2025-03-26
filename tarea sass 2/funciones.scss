@@ -1,0 +1,7 @@
+// Importamos el módulo de listas de SASS
+@use "sass:list";
+
+// Función para calcular la anchura en porcentaje (con un tope máximo)
+@function calcularAnchura($factor, $max) {
+    @return min(#{$factor * 100%}, #{$max}px);
+}

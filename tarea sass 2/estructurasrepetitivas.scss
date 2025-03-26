@@ -1,0 +1,19 @@
+@use "sass:list";
+@import "variables";
+
+// Aplicar estilos a los encabezados con @each
+@each $h, $size in $tamanos {
+    #{$h} {
+        font-size: $size;
+        color: list.nth($colores, list.index($tamanos, ($h $size)));
+        margin-bottom: 12px;
+    }
+}
+
+//  colores alternos para las filas de la tabla
+@each $color in $colores-filas {
+    $i: list.index($colores-filas, $color);
+    tr:nth-child(#{$i}) {
+        background-color: $color;
+    }
+}
